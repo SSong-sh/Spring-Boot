@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>연산자</h1>
+
+    <!--
+        타임리프 상수/리터럴
+        - Text: 'hong', 'test', '100'
+        - Number: 10, 123, 3.14
+        - Boolean: true, false
+        - Null : null
+
+     -->
+
+    <div>hong</div>
+    <div th:text="hong"></div>
+    <div th:text="'hong'">***</div>
+    <div th:text="${'hong'}">***</div>
+    <div th:text="${hong}">비권장</div>
+
+    <!--
+        타임리프 연산자
+        - 산술 연산자
+        - 비교 연산자
+        - 논리 연산자
+        - 삼항 연산자
+        - 문자열 연산 > 동일 + 추가
+
+     -->
+
+    <div>10 + 3 = 13</div>
+    <div><span th:text="${a}"></span> + <span th:text="${b}"></span> = <span th:text="${a+b}"></span></div>
+
+    <div th:text="'10 + 3 = 13'"></div>
+    <div th:text="${a + ' + ' + b + ' = ' + (a+b)}"></div>
+    <div th:text="${a} + ' + ' + ${b} + ' = ' + ${a+b}"></div>
+
+    <div th:text="|10 + 3 = 13|"></div>
+
+    <div th:text="'${a} + ${b} = ${a+b}' "></div>
+    <div th:text="|${a} + ${b} = ${a+b}| "></div>
+
+    <hr>
+
+    <div th:text="${a} + ${b}"></div>
+    <div th:text="${a + b}"></div>
+    <div th:text="${a} - ${b}"></div>
+    <div th:text="${a} * ${b}"></div>
+    <div th:text="${a} / ${b}"></div>
+    <div th:text="${a} % ${b}"></div>
+
+    <hr>
+    <div th:text="${a} > ${b}"></div>
+    <div th:text="${a} >= ${b}"></div>
+    <div th:text="${a} < ${b}"></div>
+    <div th:text="${a} <= ${b}"></div>
+    <div th:text="${a} == ${b}"></div>
+    <div th:text="${a} != ${b}"></div>
+
+    <hr>
+    <div th:text="${a} gt ${b}"></div>
+
+    <hr>
+
+    <div th:text="true and true"></div>
+    <div th:text="true or false"></div>
+
+    <!-- 안되는 표현
+    <div th:text="true && false"></div>
+    <div th:text="true || true"></div>
+    -->
+
+    <hr>
+
+    <div th:text="${a} > 0 ? '양수' : '양수아님'"></div>
+    <!-- 만족하면 ok-->
+    <div th:text="${a} > 0 ? '양수'"></div>
+    <!-- 만족 안하면 null 반환 -->
+    <div th:text="${a} < 0 ? '양수'"></div>
+    <!-- 만족하면 앞에꺼, 아니면 뒤에  -->
+    <div th:text="${a} > 0 ?: '양수아님'"></div>
+
+<!--    &lt;!&ndash; null이 아닐때 주로 사용  &ndash;&gt;-->
+<!--    &lt;!&ndash;/*타임리프 주석 -> html 주석을 쓰면 타임리프 에러 상황에 에러 뜸 */&ndash;&gt;-->
+<!--    &lt;!&ndash;/*-->
+<!--        <div th:text="${문자열}  ?: '대체'"></div>-->
+<!--    /*&ndash;&gt;-->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+2. Mybatis 설정(db 설정)
+- application.yml > datasource 설정
+
+- com.test.bootthymeleaf.mapper > AddressMapper.java(i)
+- src/main/resource > mapper > AddressMapper.xml
+- src/test/java > com.test.bootthymeleaf > MapperTests.java
+
+3. Log4j2 설정
+- logback > log4j2
+
+3.1 build.gradle
+- 의존성 추가
+
+3.2 파일
+- resource > log4j2.xml
+- resource > log4jdbc.log4j2.properties
+
+
+Thyemleaf
+- 템플릿 엔진
+- JSP 역할
+- 스프링 부트 > JSP 포기 > Thymeleaf 선택
+- JSP (HTML + EL + JSTL)
+
+- application.yml
+
+
+파일 생성
+- com.test.bootthymeleaf.controller > ThymeleafController.java
+- com.test.bootthymeleaf.mapper > AddressMapper.java
+- com.test.bootthymeleaf.dto > AddressDTO.java
+
+- templates > index.html
+            >
