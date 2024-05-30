@@ -1,0 +1,31 @@
+spring:
+    application:
+        name: boot-jpa
+
+    # DB 설정
+    datasource:
+        driver-class-name: oracle.jdbc.OracleDriver
+        url: jdbc:oracle:thin:@localhost:1521/xe
+        username: springboot
+        password: java1234
+
+    # JPA 설정
+    jpa:
+        database: oracle
+        generate-ddl: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        show-sql: true
+        properties:
+          hibernate:
+              format_sql: true #예쁘게
+
+    # 타임리프 캐시(사용안함) > 개발 시
+    thymeleaf:
+        cache: false
+
+
+server:
+    port: 8090

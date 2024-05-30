@@ -8,10 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 
@@ -126,6 +123,62 @@ public class ThymeleafController {
         model.addAttribute("name", name);
 
         return "m05";
+    }
+
+
+    @GetMapping(value = "/m06.do")
+    public String m06(Model model) {
+
+        //포맷 출력(printf)
+        int num1 = 1234567;
+        double num2 = 1234567.124;
+        Calendar now = Calendar.getInstance();
+
+        model.addAttribute("num1", num1);
+        model.addAttribute("num2", num2);
+        model.addAttribute("now", now);
+
+        return "m06";
+    }
+
+    @GetMapping(value = "/m07.do")
+    public String m07(Model model) {
+
+        //Link URL Expressions, 링크 주소 표현식
+        //- @{}
+        //- 링크의 URL을 출력하는 역할
+        //- 매개변수 처리 용이(QueryString)
+
+        int seq = 10;
+        String mode = "add";
+
+        model.addAttribute("seq", seq);
+        model.addAttribute("mode", mode);
+
+
+
+        return "m07";
+    }
+
+    @GetMapping(value = "/m08.do")
+    public String m08(Model model) {
+
+        //제어문
+        int num1 = 10;
+        int num2 = -5;
+        String mode = "add";
+
+        List<String> names = addressMapper.names();
+        List<AddressDTO> list = addressMapper.list();
+
+
+        model.addAttribute("num1", num1);
+        model.addAttribute("num2", num2);
+        model.addAttribute("mode", mode);
+        model.addAttribute("names", names);
+        model.addAttribute("list", list);
+
+        return "m08";
     }
 
 //    @GetMapping(value = "/m.do")
