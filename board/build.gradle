@@ -25,15 +25,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA Starter 추가
     implementation 'org.mariadb.jdbc:mariadb-java-client'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3' // 원하는 버전으로 변경 가능
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
-
-
 
 tasks.named('test') {
     useJUnitPlatform()

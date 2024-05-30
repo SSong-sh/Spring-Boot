@@ -11,11 +11,11 @@ import lombok.ToString;
 public class BoardDTO {
 
     private Long id;
-    private String boardWriter;
-    private String boardPass;
-    private String boardTitle;
-    private String boardContent;
-    private int boardHits;
+    private String board_Writer;
+    private String board_Pass;
+    private String board_Title;
+    private String board_Contents;
+    private int board_Hits;
     private String createAt;
 
 }

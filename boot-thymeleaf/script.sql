@@ -504,3 +504,7 @@ commit;
 select count(*) from tblAddress;
 select count(*) from tblInfo;
 select count(*) from tblMemo;
+
+ select count(*) from tblAddress;
+ 
+  select * from from tblMemo where rownum = 1;

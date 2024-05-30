@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+    <insert id="save" parameterType="com.test.board.dto.BoardDTO">
+        INSERT INTO board_table (board_title, board_writer, board_pass, board_contents)
+        VALUES (#{boardTitle}, #{boardWriter}, #{boardPass}, #{boardContents})
+    </insert>
+
+    <select id="list" resultType="com.test.board.dto.BoardDTO">
+        SELECT * FROM board_table
+    </select>
+</mapper>

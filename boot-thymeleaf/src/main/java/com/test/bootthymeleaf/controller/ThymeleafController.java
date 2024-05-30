@@ -2,7 +2,6 @@ package com.test.bootthymeleaf.controller;
 
 import com.test.bootthymeleaf.dto.AddressDTO;
 import com.test.bootthymeleaf.mapper.AddressMapper;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -10,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -102,7 +102,24 @@ public class ThymeleafController {
 
         String txt1="홍길동입니다.";
         String txt2="<b>홍길동</b> 입니다.";
-        String name="홍길동";
+        //String name="홍길동";
+
+        int num = 100;
+        String name ="홍길동";
+        AddressDTO dto = addressMapper.get();
+        Map<String,Integer> map = new HashMap<>();
+        map.put("kor",100);
+        map.put("eng",90);
+        map.put("mat",80);
+        List<String> names = addressMapper.names();
+        List<AddressDTO> list = addressMapper.list();
+
+        model.addAttribute("num", num);
+        model.addAttribute("txt1", txt1);
+        model.addAttribute("dto", dto);
+        model.addAttribute("map", map);
+        model.addAttribute("names", names);
+        model.addAttribute("list", list);
 
         model.addAttribute("txt1", txt1);
         model.addAttribute("txt2", txt2);

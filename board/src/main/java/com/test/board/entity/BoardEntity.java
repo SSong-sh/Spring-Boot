@@ -1,14 +1,19 @@
 package com.test.board.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.*;
+
 
 @Entity
-@Table
+@Table(name = "board_jpa_new")
 public class BoardEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Column(length = 30, nullable = false)
+    private String boardWriter;
 
+    @Column
+    private String boardTitle;
 }

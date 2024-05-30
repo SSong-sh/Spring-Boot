@@ -5,8 +5,12 @@ import com.test.board.service.BoardService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
+
 
 @Controller
 @RequiredArgsConstructor
@@ -20,8 +24,21 @@ public class BoardController {
     }
 
     @PostMapping("/save")
-    public String save(BoardDTO dto) {
-        System.out.println("dto = " + dto);
+    public String save(BoardDTO boardDTO) {
+        //System.out.println("dto = " + dto);
+
+        boardService.save(boardDTO);
         return "index";
+    }
+
+    @GetMapping("/list")
+    public String list(Model model) {
+
+        List<BoardDTO> boardDTOList = boardService.list();
+
+        model.addAttribute("boardDTOList", boardDTOList);
+        System.out.println("boardDTOList: " + boardDTOList);
+
+        return "list";
     }
 }
