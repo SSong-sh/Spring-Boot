@@ -5,10 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
 </head>
 <body>
+<h1>Scalar</h1>
+
+<div th:text="${result}"></div>
+
+<div th:if="${addressTuple != null}">
+    <div th:text="${addressTuple.get(0,long)}"></div>
+    <div th:text="${addressTuple.get(1,Double)}"></div>
+</div>
 
 </body>
 </html>

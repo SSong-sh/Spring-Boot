@@ -516,4 +516,7 @@ desc tblAddress;
 drop TABLE HTE_ADDRESS;
 drop TABLE ADDRESS;
 
+select * from tblInfo;
+select * from tblMemo;
+
   select * from from tblMemo where rownum = 1;

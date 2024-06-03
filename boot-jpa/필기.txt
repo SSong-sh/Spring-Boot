@@ -11,3 +11,11 @@ ORM
 파일 생성
 - com.test.bootjpa.controller > AddressController.java
 - com.test.bootjpa.dto > AddressDTO.java
+
+
+추가 생성
+- com.test.bootjpa.entity > Info.java
+                          > Memo.java
+
+- com.test.bootjpa.repository > InfoRepository.java(I)
+                              > MemoRepository.java(I)

@@ -17,6 +17,11 @@ public class AddressDTO {
     private String address;
     private String gender;
 
+    public AddressDTO(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
     public static Address toEntity(AddressDTO dto) {
         //DTO > Entity
         return Address.builder()

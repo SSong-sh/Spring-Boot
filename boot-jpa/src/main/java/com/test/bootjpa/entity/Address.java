@@ -4,6 +4,8 @@ import com.test.bootjpa.dto.AddressDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 
 //Entity
 //- 데이터베이스의 테이블과 연결된 객체
@@ -26,6 +28,11 @@ public class Address {
     private Integer age;
     private String address;
     private String gender;
+
+    //Address 하나가 여러개의 Memo
+    @OneToMany
+    @JoinColumn(name = "aseq")
+    private List<Memo> memo;
 
     public static AddressDTO toDTO(Address address) {
         //엔티티 > DTO
