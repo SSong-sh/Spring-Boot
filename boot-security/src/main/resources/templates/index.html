@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div th:replace="~{inc/header :: menu}"></div>
+
+    <h2>Index</h2>
+
+    <!--/*
+
+        조각페이지
+        1. th:insert="~{경로}"
+        2. th:replace="~{경로}"
+
+    */-->
+
+    <!-- div 자식으로 들어감  -->
+    <!--<div th:insert="~{inc/header.html}"></div>
+    <div th:insert="~{inc/header}"></div>
+
+    <hr>-->
+
+    <!-- div 태그를 대체 > 주로 이거 > 디자인에 영향을 미치지 않음 -->
+    <!--<div th:replace="~{inc/header :: header}"></div>-->
+
+    <!-- username(아이디) -->
+    <div sec:authentication="name"></div>
+
+
+    <!-- MemberDTO, Member-->
+    <div sec:authentication="principal"></div>
+
+    <!-- ROLE -->
+    <!--<div sec:authentication="principal.authorities"></div>-->
+
+    <div sec:authorize="isAnonymous()">익명사용자</div>
+    <div sec:authorize="isAuthenticated()">인증사용자</div>
+
+</body>
+</html>
