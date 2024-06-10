@@ -14,3 +14,5 @@ select * from member where username='hong';
 delete from member;
 
 commit;
+
+select * from member;
