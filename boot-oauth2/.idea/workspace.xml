@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="87469ba4-2615-42c3-b10a-083a18ea6b2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../boot-elastic/src/main/java/com/test/elastic/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-elastic/필기.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot-elastic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-elastic/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-elastic/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-elastic/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-elastic/src/main/resources/templates/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,16 +27,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/class/code/springboot/boot-oauth2&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/class/code/springboot/boot-oauth2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -55,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718324182989</updated>
       <workItem from="1718324184049" duration="45000" />
-      <workItem from="1718324249107" duration="116000" />
+      <workItem from="1718324249107" duration="714000" />
     </task>
     <servers />
   </component>
