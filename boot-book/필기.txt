@@ -1,0 +1,22 @@
+
+
+Spring Boot + JPA + Elasticsearch
+
+
+설정
+
+boot-book > script.sql
+
+
+- com.test.book.controller > BookController.java
+- com.test.book.service > BooKService.java
+- com.test.book.dto > BookDTO.java
+- com.test.book.repository > BookRepository.java(i)
+- com.test.book.repository > ElasticsearchRepository.java
+- com.test.book.entity > Book.java
+
+
+- templates > list.html
+            > view.html
+            > add.html
+            > inc > header.html
