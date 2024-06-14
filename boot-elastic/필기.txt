@@ -1,0 +1,7 @@
+- 스프링에서 엘라스틱서치를 crud 한다
+
+파일 생성
+- com.test.elastic.controller > TestController.java
+
+- templates > list.html
+            > add. html
